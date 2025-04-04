@@ -15,13 +15,12 @@ const App = () => {
 
   return (
     <div>
-        {/*1.1 Starts*/}
         <Header course={course}/>
-        <Content part={part1} content={exercises1}/>
+          <Content/>
         <Header course={course}/>
-        <Content part={part1} content={exercises2}/>
+          <Content/>
         <Header course={course}/>
-        <Content part={part1} content={exercises3}/>
+          <Content/>
         <br/>
         <Total total={ExercisesTotal}/>
     </div>

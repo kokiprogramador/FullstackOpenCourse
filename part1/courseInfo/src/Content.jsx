@@ -1,7 +1,15 @@
+import Part from './Part.jsx'
 
-const Content = ({ part, content }) =>{
+
+const Content = () =>{
+		const part1 = 'Fundamentals of React'
+	  	const exercises1 = 10
 	return(
-	 	<p>{part} <br/><br/> Exercises: {content}</p>
+		<div>
+	 		<Part part={part1} content={exercises1}/>
+	 		<Part part={part1} content={exercises1}/>
+	 		<Part part={part1} content={exercises1}/>
+	 	</div>
 	)
 }
 
