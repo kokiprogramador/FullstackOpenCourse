@@ -1,32 +1,37 @@
 import { useState } from "react";
 
 const Display = ({ good, neutral, bad, total, average, positive }) => {
+  if (good === 0) {
+    return <div>No feedback given</div>;
+  }
   return (
-    <table>
-      <thead>
-        <tr>
-          <td scope="row">
-            Good: <br /> {good}
-          </td>
-          <td scope="row">
-            Neutral: <br /> {neutral}
-          </td>
-          <td scope="row">
-            Bad: <br /> {bad}
-          </td>
-          <td scope="row">
-            All: <br /> {total}
-          </td>
-          <td scope="row">
-            Average: <br /> {average}
-          </td>
-          <td>
-            Positive <br />
-            {positive} %
-          </td>
-        </tr>
-      </thead>
-    </table>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td scope="row">
+              Good: <br /> {good}
+            </td>
+            <td scope="row">
+              Neutral: <br /> {neutral}
+            </td>
+            <td scope="row">
+              Bad: <br /> {bad}
+            </td>
+            <td scope="row">
+              All: <br /> {total}
+            </td>
+            <td scope="row">
+              Average: <br /> {average}
+            </td>
+            <td>
+              Positive <br />
+              {positive} %
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </div>
   );
 };
 
